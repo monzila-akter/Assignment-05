@@ -69,7 +69,7 @@
               alt=""
             />
             <h3 class="text-sm lg:text-xl font-medium text-[#111111B3]">
-              <span>5500</span> BDT
+              <span id="available-balance">5500</span> BDT
             </h3>
           </div>
         </div>
@@ -78,10 +78,14 @@
       <section
         class="contianer mx-auto flex space-x-4 justify-center items-center mb-8"
       >
-        <button class="btn bg-[#B4F461] text-xl font-semibold text-black">
+        <button
+          id="show-donation-btn"
+          class="btn bg-white border-2 border-[#1111114D] text-xl font-semibold text-[#111111B3]"
+        >
           Donation
         </button>
         <button
+          id="show-history-btn"
           class="btn bg-white border-2 border-[#1111114D] text-xl font-semibold text-[#111111B3]"
         >
           History
@@ -90,7 +94,10 @@
     </header>
     <main>
       <!-- Donation section start from here -->
-      <section class="container mx-auto px-5 lg:px-0 mb-20">
+      <section
+        id="donation-section"
+        class="container mx-auto px-5 lg:px-0 mb-20"
+      >
         <!-- card one -->
         <div
           class="flex flex-col lg:flex-row gap-y-6 p-5 lg:p-8 border-2 border-gray-200 rounded-xl shadow-sm mb-8 gap-x-10 items-center"
@@ -107,7 +114,7 @@
           <div class="w-full">
             <button class="btn mb-7">
               <img src="./assets/coin.png" alt="" />
-              <p class="text-[#111111B3]"><span>0</span> BDT</p>
+              <p class="text-[#111111B3]"><span id="balance">0</span> BDT</p>
             </button>
             <h2 class="text-xl font-bold mb-6">
               Donate for Flood at Noakhali, Bangladesh
@@ -122,13 +129,13 @@
             </p>
             <input
               class="w-full h-14 p-4 border-2 border-gray-200 rounded-lg mb-6"
-              type="number"
+              type="text"
               name=""
-              id=""
+              id="add-money-input"
               placeholder="Write Donation Amount"
             />
             <button
-              onclick="my_modal_1.showModal()"
+              id="donation-btn"
               class="btn h-14 w-full text-xl font-semibold bg-[#B4F461]"
             >
               Donate Now
@@ -170,7 +177,9 @@
           <div class="w-full">
             <button class="btn mb-7">
               <img src="./assets/coin.png" alt="" />
-              <p class="text-[#111111B3]"><span>600</span> BDT</p>
+              <p class="text-[#111111B3]">
+                <span id="balance-2">600</span> BDT
+              </p>
             </button>
             <h2 class="text-xl font-bold mb-6">
               Donate for Flood Relief in Feni,Bangladesh
@@ -187,13 +196,13 @@
             </p>
             <input
               class="w-full h-14 p-4 border-2 border-gray-200 rounded-lg mb-6"
-              type="number"
+              type="text"
               name=""
-              id=""
+              id="add-money-input-2"
               placeholder="Write Donation Amount"
             />
             <button
-              onclick="my_modal_1.showModal()"
+              id="donation-btn-2"
               class="btn h-14 w-full text-xl font-semibold bg-[#B4F461]"
             >
               Donate Now
@@ -216,7 +225,9 @@
           <div class="w-full">
             <button class="btn mb-7">
               <img src="./assets/coin.png" alt="" />
-              <p class="text-[#111111B3]"><span>2400</span> BDT</p>
+              <p class="text-[#111111B3]">
+                <span id="balance-3">2400</span> BDT
+              </p>
             </button>
             <h2 class="text-xl font-bold mb-6">
               Aid for Injured in the Quota Movement
@@ -234,13 +245,13 @@
             </p>
             <input
               class="w-full h-14 p-4 border-2 border-gray-200 rounded-lg mb-6"
-              type="number"
+              type="text"
               name=""
-              id=""
+              id="add-money-input-3"
               placeholder="Write Donation Amount"
             />
             <button
-              onclick="my_modal_1.showModal()"
+              id="donation-btn-3"
               class="btn h-14 w-full text-xl font-semibold bg-[#B4F461]"
             >
               Donate Now
@@ -249,10 +260,15 @@
         </div>
       </section>
       <!-- History section start here -->
-      <section class="container mx-auto hidden"></section>
+      <section id="history-section" class="container mx-auto hidden mb-16">
+        <div id="history-container" class="space-y-5"></div>
+      </section>
     </main>
     <footer class="w-full h-32 bg-orange-50"></footer>
+    <script src="./utilities.js"></script>
+    <script src="./increase.js"></script>
     <script src="./click.js"></script>
     <script src="./sticky.js"></script>
+    <script src="./features.js"></script>
   </body>
 </html>
