@@ -21,7 +21,7 @@ historyBtn.addEventListener('click', function(){
     historyBtn.classList.add("text-black", "bg-lime-400", "border-none");
     donationBtn.classList.remove('text-black', 'bg-lime-300', 'bg-lime-400');
     donationBtn.classList.add('bg-gray-200', 'text-gray-600');
-    historyBtn.classList.remove('text-gray-600',  'bg-gray-200')
+    historyBtn.classList.remove('text-gray-600',  'bg-white')
     
 
     getSectionById('history-section');
